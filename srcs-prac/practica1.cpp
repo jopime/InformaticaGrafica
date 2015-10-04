@@ -8,10 +8,13 @@
 #include "aux.hpp"
 #include "tuplasg.hpp"   // Tupla3f
 #include "practica1.hpp"
-
+#include "Cubo.hpp"
+#include <iostream>
+using namespace std;
 // ---------------------------------------------------------------------
 // declaraciones de estructuras de datos....
   const int num_vertsT=12, num_verts=24;
+
   GLfloat verticesT[num_vertsT*3]=
     {
       -1,-1,1,
@@ -30,7 +33,7 @@
       -1,-1,1,
       -1,-1,-1,
      };
-     GLfloat vertices[num_verts*3]=
+     GLfloat verticesC[num_verts*3]=
        {
 //Lado Frontal
         1, - 1, - 1,
@@ -67,7 +70,7 @@
  - 1,   1,   1 ,
 
        };
-
+       Cubo micubo;
 // ---------------------------------------------------------------------
 // Función para implementar en la práctica 1 para inicialización.
 // Se llama una vez al inicio, cuando ya se ha creado la ventana e
@@ -75,6 +78,7 @@
 
 void P1_Inicializar( int argc, char *argv[] )
 {
+  micubo.presentacion();
 // vertices[0,0,1]={2};
 }
 
@@ -84,11 +88,5 @@ void P1_Inicializar( int argc, char *argv[] )
 
 void P1_DibujarObjetos( unsigned modo )
 {
-  glEnableClientState( GL_VERTEX_ARRAY ); // habilitar array de vértices
-  glVertexPointer( 3, GL_FLOAT, 0, vertices); // estable direccion y estructuras
-  glColor3f(0.0,1.0,0.0);    //Bola en color amarillo
-  glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
-  glDrawArrays(GL_TRIANGLES,0,num_verts);     //Visualiza primitivas
-  glDisableClientState(GL_VERTEX_ARRAY);// Deshabilitar array de vértices
-
+  micubo.visualizar(4);
 }

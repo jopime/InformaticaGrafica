@@ -384,7 +384,8 @@ void Inicializa_OpenGL( )
    glEnable( GL_DEPTH_TEST );
 
    // establecer color de fondo: (1,1,1) (blanco)
-   glClearColor( 1.0, 1.0, 1.0, 1.0 ) ;
+   //PUESTO A NEGRO
+   glClearColor( 0.0, 0.0, 0.0, 1.0 ) ;
 
    // establecer color inicial para todas las primitivas
    glColor3f( 0.7, 0.2, 0.4 ) ;

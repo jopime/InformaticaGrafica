@@ -15,7 +15,7 @@
 ## unidades a enlazar y nombre del binario ejecutable
 
 target_name	:= prac
-units_loc   := main practica1 ##Objeto3D MallaInd
+units_loc   := Objeto3D MallaInd Cubo practica1 main
 ### nota: añadir a 'units_loc' los módulos practica2 practica3, etc.....
 
 units       := jpg_memsrc jpg_readwrite\
