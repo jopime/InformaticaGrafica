@@ -11,9 +11,10 @@
       // protected:
     public:
             // declarar aquí tablas de vértices y caras
-            std::vector<Tupla3f> verticesC;
-            int num_verts;
-            Tupla3f *nostl=NULL;
+            int num_verts,num_caras;
+            Tupla3i *nostlCaras=NULL;
+            Tupla3f *nostlVertices=NULL;
+
 
         // ....
   //     public:

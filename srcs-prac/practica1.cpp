@@ -25,7 +25,7 @@ Tetraedro mitetraedro;
 void P1_Inicializar( int argc, char *argv[] )
 {
   micubo.presentacion();
-  //mitetraedro.presentacion();
+  mitetraedro.presentacion();
 }
 
 // ---------------------------------------------------------------------
@@ -34,6 +34,10 @@ void P1_Inicializar( int argc, char *argv[] )
 
 void P1_DibujarObjetos( unsigned modo )
 {
-  micubo.visualizar(5);
-  //mitetraedro.visualizar(5);
+  if (modo>3){
+    micubo.visualizar(modo%4);
+    }
+  else{
+    mitetraedro.visualizar(modo);
+  }
 }

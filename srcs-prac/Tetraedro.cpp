@@ -1,13 +1,17 @@
 #include "Tetraedro.hpp"
 Tetraedro::Tetraedro(){
   nombre_obj="Tetraedro";
-  num_verts=12;
+  num_verts=4;
+  num_caras=3;
+Tupla3f a(0.866,0,-0.5),c(0,1.4142,0),d(0,0,1),g(-0.866,0,-0.5);
 
-Tupla3f a(0,2,0),c(-1,-1,1),d(1,-1,1),g(-1,-1,-1),h(1,-1,-1);
+  nostlVertices = new Tupla3f[num_verts];
+  nostlVertices[0]=a;  nostlVertices[1]=c; nostlVertices[2]=d; nostlVertices[3]=g;
 
-  nostl = new Tupla3f[num_verts];
-  nostl[0]=c;  nostl[1]=d; nostl[2]=a;
-  nostl[3]=a;  nostl[4]=h; nostl[5]=g;
-  nostl[6]=g;  nostl[7]=c;  nostl[8]=a;
-  nostl[9]=a;  nostl[10]=h; nostl[11]=d;
+  nostlCaras = new Tupla3i[num_caras];
+
+  Tupla3i t1(0,1,2), t2(2,3,1),t3(1,3,0);
+
+  nostlCaras[0]=t1;nostlCaras[1]=t2;nostlCaras[2]=t3;
+
 }
