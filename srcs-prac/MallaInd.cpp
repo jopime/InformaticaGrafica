@@ -19,7 +19,7 @@ void MallaInd::visualizar (unsigned modo_vis){
     glVertexPointer( 3, GL_FLOAT, 0, &verticesC); // estable direccion y estructuras
     glColor3f(0.0,1.0,0.0);    //Color Verde
     //glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
-    glDrawArrays(GL_LINE_LOOP,0,verticesC.size()*3);     //Visualiza primitivas
+    glDrawArrays(GL_LINE_LOOP,0,verticesC.size());     //Visualiza primitivas
     glDisableClientState(GL_VERTEX_ARRAY);// Deshabilitar array de vértices
     break;
 
@@ -47,6 +47,18 @@ void MallaInd::visualizar (unsigned modo_vis){
     glColor3f(0.0,1.0,0.0);    //Color Verde
     glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
     glDrawArrays(GL_TRIANGLES,0,num_verts);     //Visualiza primitivas
+    glDisableClientState(GL_VERTEX_ARRAY);// Deshabilitar array de vértices
+    break;
+
+    case 5:         //uso de array MODO AJEDREZ
+    glEnableClientState( GL_VERTEX_ARRAY ); // habilitar array de vértices
+    glVertexPointer( 3, GL_FLOAT, 0, nostl); // estable direccion y estructuras
+    glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
+    for(int i=0;i<num_verts;i=i+6){
+        glColor3f(1.0,1.0,((i/6)%2));    //Color BLANCO/AMARILLO
+        glDrawArrays(GL_TRIANGLES,i,6);     //Visualiza primitivas
+  }
+
     glDisableClientState(GL_VERTEX_ARRAY);// Deshabilitar array de vértices
     break;
     default:

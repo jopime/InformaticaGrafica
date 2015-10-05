@@ -34,6 +34,6 @@ void P1_Inicializar( int argc, char *argv[] )
 
 void P1_DibujarObjetos( unsigned modo )
 {
-  //micubo.visualizar(4);
-  mitetraedro.visualizar(2);
+  micubo.visualizar(5);
+  //mitetraedro.visualizar(5);
 }

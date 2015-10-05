@@ -19,11 +19,13 @@ Tupla3f a(-1,1,1),b(1,1,1),c(-1,-1,1),d(1,-1,1),
   nostl[18]=e; nostl[19]=f; nostl[20]=b;
   nostl[21]=b; nostl[22]=a; nostl[23]=e;
 
-  nostl[24]=e; nostl[25]=g; nostl[26]=a;
-  nostl[27]=a; nostl[28]=c; nostl[29]=g;
+  nostl[24]=g; nostl[25]=h; nostl[26]=c;
+  nostl[27]=c; nostl[28]=d; nostl[29]=h;
 
-  nostl[30]=g; nostl[31]=h; nostl[32]=c;
-  nostl[33]=c; nostl[34]=d; nostl[35]=h;
+  nostl[30]=e; nostl[31]=g; nostl[32]=a;
+  nostl[33]=a; nostl[34]=c; nostl[35]=g;
+
+
 
   //INTENTO CON VECTOR DE LA STL
   Tupla3f v1(1,-1,-1),v2(1,1,-1),v3(-1,1,-1),v4(-1,-1,-1),
