@@ -21,7 +21,7 @@ using namespace std;
 Cubo micubo;
 Tetraedro mitetraedro;
 Cono micono(60);
-Cilindro micilindro(6);
+Cilindro micilindro(60);
 // ---------------------------------------------------------------------
 // Función para implementar en la práctica 1 para inicialización.
 // Se llama una vez al inicio, cuando ya se ha creado la ventana e
@@ -41,14 +41,17 @@ void P1_Inicializar( int argc, char *argv[] )
 
 void P1_DibujarObjetos( unsigned modo )
 {
-//  micono.visualizar(modo);
-micilindro.visualizar(modo);
-  /*
-  if (modo>3){
+  if (modo>11){
+    micono.visualizar(modo%4);
+  }
+  else if(modo>7){
+    micilindro.visualizar(modo%4);
+  }
+  else if (modo>3){
     micubo.visualizar(modo%4);
     }
   else{
     mitetraedro.visualizar(modo);
   }
-  */
+
 }

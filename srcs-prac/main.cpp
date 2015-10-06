@@ -273,6 +273,30 @@ void FGE_PulsarTeclaNormal( unsigned char tecla, int x_raton, int y_raton )
       case '7':
           modo_vis=7;
           break;
+      case '8':
+          modo_vis=8;
+          break;
+      case '9':
+          modo_vis=9;
+          break;
+      case 'A':
+          modo_vis=10;
+          break;
+      case 'S':
+          modo_vis=11;
+          break;
+      case 'D':
+          modo_vis=12;
+          break;
+      case 'F':
+          modo_vis=13;
+          break;
+      case 'G':
+          modo_vis=14;
+          break;
+      case 'H':
+        modo_vis=15;
+        break;
       default:
          redisp = false ;
          break ;
