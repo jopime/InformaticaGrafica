@@ -10,6 +10,9 @@
 #include "practica1.hpp"
 #include "Cubo.hpp"
 #include "Tetraedro.hpp"
+#include "Cono.hpp"
+#include "Cilindro.hpp"
+
 #include <iostream>
 using namespace std;
 // ---------------------------------------------------------------------
@@ -17,6 +20,8 @@ using namespace std;
 
 Cubo micubo;
 Tetraedro mitetraedro;
+Cono micono(60);
+Cilindro micilindro(6);
 // ---------------------------------------------------------------------
 // Función para implementar en la práctica 1 para inicialización.
 // Se llama una vez al inicio, cuando ya se ha creado la ventana e
@@ -26,6 +31,8 @@ void P1_Inicializar( int argc, char *argv[] )
 {
   micubo.presentacion();
   mitetraedro.presentacion();
+  micono.presentacion();
+  micilindro.presentacion();
 }
 
 // ---------------------------------------------------------------------
@@ -34,10 +41,14 @@ void P1_Inicializar( int argc, char *argv[] )
 
 void P1_DibujarObjetos( unsigned modo )
 {
+//  micono.visualizar(modo);
+micilindro.visualizar(modo);
+  /*
   if (modo>3){
     micubo.visualizar(modo%4);
     }
   else{
     mitetraedro.visualizar(modo);
   }
+  */
 }

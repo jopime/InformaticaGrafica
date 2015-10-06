@@ -1,8 +1,10 @@
 #ifndef MALLAIND_HPP
   #define MALLAIND_HPP
+  # define M_PI 3.14159265358979323846  /* pi */
 #include "Objeto3D.hpp"
 #include "aux.hpp"
 #include <vector>
+#include <math.h>
 #include "tuplasg.hpp"
 
    // .....
