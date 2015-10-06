@@ -8,9 +8,8 @@
 #ifndef IG_PRACTICA1_HPP
 #define IG_PRACTICA1_HPP
 
-bool P1_Cambiar(int tecla);
-void P1_DibujarObjetos( unsigned modo ) ;
 void P1_Inicializar( int argc, char *argv[] ) ;
-
+bool P1_FGE_PulsarTeclaNormal(  unsigned char tecla ) ;
+void P1_DibujarObjetos( unsigned modo ) ; 
 
 #endif

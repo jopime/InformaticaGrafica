@@ -155,12 +155,9 @@ void DibujarEjes()
 
    // bola en el origen, negra
    glPolygonMode( GL_FRONT_AND_BACK, GL_FILL );
-   glColor3f(2.0,2.0,0.0);    //Bola en color amarillo
-   glutWireSphere(0.0,0.0,0.0);
-/*   glutWireSphere(0.5,8,8);  //Modificado el radio de la esfera
-   glColor3f(2.0,0.0,0.0);    //Toro en color Rojo
-   glutWireTorus(1.0, 2.0, 20, 20);             //añado un toro
-*/
+   glColor3f(0.0,0.0,0.0);
+   glutSolidSphere(0.01,8,8);
+
 }
 
 // ---------------------------------------------------------------------
@@ -237,7 +234,7 @@ void FGE_CambioTamano( int nuevoAncho, int nuevoAlto )
 void FGE_PulsarTeclaNormal( unsigned char tecla, int x_raton, int y_raton )
 {
 
-   bool redisp = true ;
+   bool redibujar = true ; // true si al acabar de procesar el evento resulta que es necesario redibujar
    switch (toupper(tecla))
    {
       case 'Q' :
@@ -249,27 +246,36 @@ void FGE_PulsarTeclaNormal( unsigned char tecla, int x_raton, int y_raton )
       case '-' :
          frustum_factor_escala /= 1.05;
          break;
-      case '0':
-          modo_vis=0;
-          break;
-      case '1':
-          modo_vis=1;
-          break;
-      case '2':
-          modo_vis=2;
-          break;
-      case '3':
-          modo_vis=3;
-          break;
+     case '0':
+         modo_vis=0;
+         break;
+     case '1':
+         modo_vis=1;
+         break;
+     case '2':
+         modo_vis=2;
+         break;
+     case '3':
+         modo_vis=3;
+         break;
       default:
-         redisp = P1_Cambiar(tecla) ;   
+         redibujar = false ;
+         switch( practica_actual )
+         {
+            case 1 :
+               redibujar = P1_FGE_PulsarTeclaNormal( tecla ) ; // true si es necesario redibujar
+               break ;
+            // falta: case 2, case 3, etc....
+            default :
+               redibujar = false ; // la tecla no es de la práctica activa (no es necesario redibujar)
+         }
          break ;
    }
    using namespace std ;
    //cout << "tecla normal....." << frustum_factor_escala << endl ;
 
    // si se ha cambiado algo, forzar evento de redibujado
-   if (redisp)
+   if (redibujar)
       glutPostRedisplay();
 }
 
@@ -396,8 +402,7 @@ void Inicializa_OpenGL( )
    glEnable( GL_DEPTH_TEST );
 
    // establecer color de fondo: (1,1,1) (blanco)
-   //PUESTO A NEGRO
-   glClearColor( 0.0, 0.0, 0.0, 1.0 ) ;
+   glClearColor( 1.0, 1.0, 1.0, 1.0 ) ;
 
    // establecer color inicial para todas las primitivas
    glColor3f( 0.7, 0.2, 0.4 ) ;
