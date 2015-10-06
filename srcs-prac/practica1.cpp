@@ -17,7 +17,7 @@
 using namespace std;
 // ---------------------------------------------------------------------
 // declaraciones de estructuras de datos....
-
+unsigned fig=0;
 Cubo micubo;
 Tetraedro mitetraedro;
 Cono micono(60);
@@ -38,20 +38,47 @@ void P1_Inicializar( int argc, char *argv[] )
 // ---------------------------------------------------------------------
 // Función a implementar en la práctica 1  para dibujar los objetos
 // modo: 0 - puntos, 1 - alambre, 2 - sólido, 3 - sólido ajedrez
+bool P1_Cambiar(int tecla )
+{
+
+   bool redisp=true;
+   switch (toupper(tecla))
+   {
+      case 'A':
+          fig=0;
+          break ;
+      case 'S':
+          fig=1;
+          break ;
+      case 'D':
+          fig=2;
+          break ;
+      case 'F':
+          fig=3;
+          break ;
+      default:
+         redisp = false ;
+         break ;
+   }
+   return redisp;
+}
+
 
 void P1_DibujarObjetos( unsigned modo )
 {
-  if (modo>11){
-    micono.visualizar(modo%4);
+cerr<<endl<<"modo "<<modo<<"  fig: "<<fig<<endl  ;
+  if (fig==0){
+    micono.visualizar(modo);
   }
-  else if(modo>7){
-    micilindro.visualizar(modo%4);
+  else if(fig==1){
+    micilindro.visualizar(modo);
   }
-  else if (modo>3){
-    micubo.visualizar(modo%4);
+  else if (fig==2){
+    micubo.visualizar(modo);
     }
-  else{
+  else if (fig==3){
     mitetraedro.visualizar(modo);
   }
+  else{cerr<<endl<<"ERROR AL SELECCIONAR FIGURA"<<endl;}
 
 }

@@ -21,7 +21,7 @@
         // ....
   //     public:
          MallaInd ();
-         void visualizar( unsigned modo_vis ) ;   //borrado el parametro "virtual"
+         virtual void visualizar( unsigned modo_vis ) ;   //borrado el parametro "virtual"
          void presentacion();
    } ;
 #endif
