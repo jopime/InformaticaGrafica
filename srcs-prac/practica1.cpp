@@ -13,6 +13,7 @@
 #include "Cono.hpp"
 #include "Cilindro.hpp"
 
+
 #include <iostream>
 using namespace std;
 
@@ -20,10 +21,10 @@ unsigned objeto_activo = 0 ; // objeto activo: cubo (0), tetraedro (1), otros...
 
 // ---------------------------------------------------------------------
 // declaraciones de estructuras de datos....
-Cubo micubo;
-Tetraedro mitetraedro;
-Cono micono(60);
-Cilindro micilindro(60);
+Cubo *micubo;
+Tetraedro *mitetraedro;
+Cono *micono;
+Cilindro *micilindro;
 
 // ---------------------------------------------------------------------
 // Función para implementar en la práctica 1 para inicialización.
@@ -32,10 +33,14 @@ Cilindro micilindro(60);
 
 void P1_Inicializar( int argc, char *argv[] )
 {
-  micubo.presentacion();
-  mitetraedro.presentacion();
-  micono.presentacion();
-  micilindro.presentacion();
+  micubo= new Cubo();
+  mitetraedro=new Tetraedro();
+  micono= new Cono(12);
+  micilindro= new Cilindro(12);
+  micubo->presentacion();
+  mitetraedro->presentacion();
+  micono->presentacion();
+  micilindro->presentacion();
 
 }
 
@@ -82,16 +87,16 @@ void P1_DibujarObjetos( unsigned modo )
 {
   cerr<<endl<<"modo "<<modo<<"  objeto_activo: "<<objeto_activo<<endl  ;
     if (objeto_activo==0){
-      micono.visualizar(modo);
+      micono->visualizar(modo);
     }
     else if(objeto_activo==1){
-      micilindro.visualizar(modo);
+      micilindro->visualizar(modo);
     }
     else if (objeto_activo==2){
-      micubo.visualizar(modo);
+      micubo->visualizar(modo);
       }
     else if (objeto_activo==3){
-      mitetraedro.visualizar(modo);
+      mitetraedro->visualizar(modo);
     }
     else{
       cerr<<endl<<"ERROR AL SELECCIONAR objeto_activo"<<endl;

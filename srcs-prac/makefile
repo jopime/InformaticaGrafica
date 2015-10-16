@@ -22,7 +22,7 @@ units       := jpg_memsrc jpg_readwrite\
                shaders matrices-tr\
                file_ply_stl\
                aux
-               
+
 ## ---------------------------------------------------------------------
 ## aspectos configurables
 
@@ -39,6 +39,3 @@ objs_dir      := ../objs
 ## invocar las definiciones y targets en el archivo 'include.make'
 
 include include.make
-
-
-

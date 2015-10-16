@@ -14,14 +14,14 @@
     public:
             // declarar aquí tablas de vértices y caras
             int num_verts,num_caras;
-            Tupla3i *nostlCaras=NULL;
-            Tupla3f *nostlVertices=NULL;
+            Tupla3i *nostlCaras;
+            Tupla3f *nostlVertices;
 
 
         // ....
   //     public:
          MallaInd ();
-         virtual void visualizar( unsigned modo_vis ) ;   //borrado el parametro "virtual"
+         virtual void visualizar( unsigned modo_vis ) ;   
          void presentacion();
    } ;
 #endif

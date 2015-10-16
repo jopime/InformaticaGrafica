@@ -6,7 +6,9 @@ MallaInd::MallaInd (){
 void MallaInd::visualizar (unsigned modo_vis){
   glEnableClientState( GL_VERTEX_ARRAY ); // habilitar array de vértices
   glVertexPointer( 3, GL_FLOAT, 0, nostlVertices); // estable direccion y estructuras
-  glColor3f(0.0,1.0,0.0);    //Color Verde
+  glColor3f(0.2,0,0.4);    //Color amarillo claro
+  glPointSize(3);
+
   switch (modo_vis) {
     case 0:
       glPolygonMode(GL_FRONT_AND_BACK,GL_POINT);
@@ -23,7 +25,7 @@ void MallaInd::visualizar (unsigned modo_vis){
     case 3:
       glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
       for(int i=0;i<num_caras;i++){
-          glColor3f(1.0,1.0,(i%2));    //Color BLANCO/AMARILLO
+          glColor3f(0.7,0.7,0.7*(i%2));    //Color Negro/AMARILLO
           glDrawElements(GL_TRIANGLES,3,GL_UNSIGNED_INT,&nostlCaras[i]);  //Visualiza primitivas
         }
       break;
