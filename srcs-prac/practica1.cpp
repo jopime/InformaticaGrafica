@@ -35,8 +35,8 @@ void P1_Inicializar( int argc, char *argv[] )
 {
   micubo= new Cubo();
   mitetraedro=new Tetraedro();
-  micono= new Cono(12);
-  micilindro= new Cilindro(12);
+  micono= new Cono(60);
+  micilindro= new Cilindro(60);
   micubo->presentacion();
   mitetraedro->presentacion();
   micono->presentacion();
