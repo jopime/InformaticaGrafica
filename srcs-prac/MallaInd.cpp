@@ -40,11 +40,11 @@ void MallaInd::visualizar (unsigned modo_vis){
   void MallaInd::presentacion (){
       cout <<"Soy "<<nombre()<<endl;
       for(int i=0;i<num_verts;i++){
-        cout<<" V[]:"<<nostlVertices[i]<<" ";
+        cout<<" V["<<i<<"]:"<<nostlVertices[i]<<" ";
       }
         cout<<endl;
       for(int i=0;i<num_caras;i++){
-        cout<<" A[]:"<<nostlCaras[i]<<" ";
+        cout<<" A["<<i<<"]:"<<nostlCaras[i]<<" ";
       }
       cout<<endl;
     }

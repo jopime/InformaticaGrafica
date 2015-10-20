@@ -9,6 +9,7 @@
 #define IG_PRACTICA2_HPP
 
 #include "MallaPLY.hpp"
+#include "MallaRevol.hpp"
 
 #include <iostream>
 using namespace std;

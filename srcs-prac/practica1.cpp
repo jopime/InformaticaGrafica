@@ -8,10 +8,11 @@
 #include "aux.hpp"
 #include "tuplasg.hpp"   // Tupla3f
 #include "practica1.hpp"
-#include "Cubo.hpp"
+#include "Toro.hpp"
 #include "Tetraedro.hpp"
 #include "Cono.hpp"
 #include "Cilindro.hpp"
+#include "Cubo.hpp"
 
 
 #include <iostream>
@@ -21,6 +22,7 @@ unsigned objeto_activo = 0 ; // objeto activo: cubo (0), tetraedro (1), otros...
 
 // ---------------------------------------------------------------------
 // declaraciones de estructuras de datos....
+Toro *mitoro;
 Cubo *micubo;
 Tetraedro *mitetraedro;
 Cono *micono;
@@ -33,15 +35,16 @@ Cilindro *micilindro;
 
 void P1_Inicializar( int argc, char *argv[] )
 {
+  mitoro= new Toro();
   micubo= new Cubo();
   mitetraedro=new Tetraedro();
   micono= new Cono(60);
   micilindro= new Cilindro(60);
-  micubo->presentacion();
-  mitetraedro->presentacion();
-  micono->presentacion();
-  micilindro->presentacion();
-
+  //mitoro->presentacion();
+  //mitetraedro->presentacion();
+  //micono->presentacion();
+  //micilindro->presentacion();
+  //micubo->presentacion();
 }
 
 // ---------------------------------------------------------------------
@@ -49,7 +52,7 @@ void P1_Inicializar( int argc, char *argv[] )
 // (si la tecla no se procesa en el 'main').
 //
 //  - devuelve 'true' si la tecla se usa en esta práctica para cambiar
-//    entre el cubo, el tetraedro u otros objetos (cambia el valor de
+//    entre el toro, el tetraedro u otros objetos (cambia el valor de
 //    'objeto_activo').
 //  - devuelve 'false' si la tecla no se usa en esta práctica (no ha
 //    cambiado nada)
@@ -70,6 +73,9 @@ bool P1_FGE_PulsarTeclaNormal( unsigned char tecla )
           break ;
       case 'F':
           objeto_activo=3;
+          break ;
+      case 'G':
+          objeto_activo=4;
           break ;
       default:
          redisp = false ;
@@ -93,10 +99,13 @@ void P1_DibujarObjetos( unsigned modo )
       micilindro->visualizar(modo);
     }
     else if (objeto_activo==2){
-      micubo->visualizar(modo);
+      mitoro->visualizar(modo);
       }
     else if (objeto_activo==3){
       mitetraedro->visualizar(modo);
+    }
+    else if (objeto_activo==4){
+      micubo->visualizar(modo);
     }
     else{
       cerr<<endl<<"ERROR AL SELECCIONAR objeto_activo"<<endl;
