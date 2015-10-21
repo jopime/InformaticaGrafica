@@ -13,15 +13,14 @@
       // protected:
     public:
             // declarar aquí tablas de vértices y caras
-            int num_verts,num_caras;
-            Tupla3i *nostlCaras;
-            Tupla3f *nostlVertices;
+            std::vector<Tupla3i> stlCaras;
+            std::vector<Tupla3f> stlVertices;
 
 
         // ....
   //     public:
          MallaInd ();
-         virtual void visualizar( unsigned modo_vis ) ;   
+         virtual void visualizar( unsigned modo_vis ) ;
          void presentacion();
    } ;
 #endif

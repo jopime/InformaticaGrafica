@@ -184,6 +184,7 @@ void DibujarObjetos()
         break;
       // falta: case 3: ..... case 4: ..... case 5: .....
       //
+
       default :
          cout << "El valor de 'practica_actual' (" << practica_actual  << ") es incorrecto" << endl ;
          break ;
@@ -272,9 +273,11 @@ void FGE_PulsarTeclaNormal( unsigned char tecla, int x_raton, int y_raton )
             case 1 :
                redibujar = P1_FGE_PulsarTeclaNormal( tecla ) ; // true si es necesario redibujar
                break ;
+
             case 2 :
                redibujar = P2_FGE_PulsarTeclaNormal( tecla ) ; // true si es necesario redibujar
             // falta: case 3, etc....
+
             default :
                redibujar = false ; // la tecla no es de la práctica activa (no es necesario redibujar)
          }
@@ -393,7 +396,7 @@ void Inicializa_Vars( )
    camara_angulo_y = 0.0 ;
 
    // inicializar práctica actual y modo de visualización inicial
-   practica_actual = 2 ;
+   practica_actual = 1 ;
    modo_vis = 0 ;
 }
 

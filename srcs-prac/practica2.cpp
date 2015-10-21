@@ -2,18 +2,18 @@
 
 unsigned objetito = 0 ; // objetito activo: cubo (0), tetraedro (1), otros....
 static MallaPLY *miPLY=NULL;
-static MallaRevol *miRevol=NULL;
-//static MallaRevol *miRev=NULL;
-
+//static MallaRevol *miRevol=NULL;
 void P2_Inicializar( int argc, char *argv[] ){
 if(argc!=3){
- cout<<"numero de argumentos incorrecto agregar ruta PLY"<<endl;
- exit(1);
-}
+ cout<<"numero de argumentos incorrecto agrego ruta PLY"<<endl;
+ miPLY= new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/srcs-prac/plys/beethoven.ply");
+ miPLY= new MallaRevol("/Users/jopime/GitHub/InformaticaGrafica/srcs-prac/plys/revol.ply",6);
 
+}
+else{
   miPLY= new MallaPLY(argv[1]);
   miRevol=new MallaRevol(argv[2],6);
-  miRevol->presentacion();
+  }
 }
 
 bool P2_FGE_PulsarTeclaNormal( unsigned char tecla )

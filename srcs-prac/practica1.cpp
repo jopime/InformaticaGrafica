@@ -35,11 +35,11 @@ Cilindro *micilindro;
 
 void P1_Inicializar( int argc, char *argv[] )
 {
-  mitoro= new Toro();
+  micono= new Cono(60);
   micubo= new Cubo();
   mitetraedro=new Tetraedro();
-  micono= new Cono(60);
   micilindro= new Cilindro(60);
+  mitoro= new Toro();
   //mitoro->presentacion();
   //mitetraedro->presentacion();
   //micono->presentacion();
@@ -93,20 +93,24 @@ void P1_DibujarObjetos( unsigned modo )
 {
   cerr<<endl<<"modo "<<modo<<"  objeto_activo: "<<objeto_activo<<endl  ;
     if (objeto_activo==0){
-      micono->visualizar(modo);
-    }
-    else if(objeto_activo==1){
-      micilindro->visualizar(modo);
-    }
-    else if (objeto_activo==2){
-      mitoro->visualizar(modo);
-      }
-    else if (objeto_activo==3){
-      mitetraedro->visualizar(modo);
-    }
-    else if (objeto_activo==4){
       micubo->visualizar(modo);
     }
+    else if(objeto_activo==1){
+      mitetraedro->visualizar(modo);
+    }
+
+    else if (objeto_activo==2){
+      micilindro->visualizar(modo);
+      }
+
+    else if (objeto_activo==3){
+      micono->visualizar(modo);
+    }
+
+    else if (objeto_activo==4){
+      mitoro->visualizar(modo);
+    }
+
     else{
       cerr<<endl<<"ERROR AL SELECCIONAR objeto_activo"<<endl;
     }
