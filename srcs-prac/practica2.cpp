@@ -3,17 +3,21 @@
 unsigned objetito = 1 ; // objetito activo: cubo (0), tetraedro (1), otros....
 static MallaPLY *miPLY=NULL;
 static MallaRevol *miRevol=NULL;
+static MallaBarrido *miBarrido=NULL;
 
 void P2_Inicializar( int argc, char *argv[] ){
-if(argc!=4){
+if(argc!=9){
  cout<<"numero de argumentos incorrecto agrego ruta PLY"<<endl;
- miPLY= new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/srcs-prac/plys/beethoven.ply");
- miRevol= new MallaRevol("/Users/jopime/GitHub/InformaticaGrafica/srcs-prac/plys/revol.ply",4);
+ miPLY= new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/plys/ant.ply");
+ miRevol= new MallaRevol("/Users/jopime/GitHub/InformaticaGrafica/plys/peon.ply",4);
+ miBarrido=new MallaBarrido("/Users/jopime/GitHub/InformaticaGrafica/plys/cerrado.ply",-0.3,1,0.5,13);
+ miBarrido->presentacion();
 
 }
 else{
   miPLY= new MallaPLY(argv[1]);
   miRevol=new MallaRevol(argv[2],atoi(argv[3]));
+  miBarrido=new MallaBarrido(argv[4],atoi(argv[5]),atoi(argv[6]),atoi(argv[7]),atoi(argv[8]));
   }
 }
 
@@ -24,11 +28,12 @@ bool P2_FGE_PulsarTeclaNormal( unsigned char tecla )
    {
       case 'Z':
           objetito=0;
-          cerr<<"pulsadoZzZZZ"<<endl;
           break ;
       case 'X':
           objetito=1;
-          cerr<<"pulsadoXXXxxXX"<<endl;
+          break ;
+      case 'C':
+          objetito=2;
           break ;
       default:
          redisp = false ;
@@ -44,6 +49,9 @@ bool P2_FGE_PulsarTeclaNormal( unsigned char tecla )
      }
      else if (objetito==1){
        miRevol->visualizar(modo);
+     }
+     else if (objetito==2){
+       miBarrido->visualizar(modo);
      }
      else{
        cerr<<endl<<"ERROR AL SELECCIONAR objetito"<<endl;
