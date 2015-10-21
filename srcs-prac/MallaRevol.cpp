@@ -7,31 +7,42 @@
 */
 #include "MallaRevol.hpp"
 
-   MallaRevol::MallaRevol(const char * nombre_arch , unsigned nperfiles){}
-   /*
+   MallaRevol::MallaRevol(const char * nombre_arch , unsigned nperfiles){
+
 
      std::vector<float> vertices_ply ; // coordenadas de vértices
      ply::read_vertices( nombre_arch, vertices_ply );
      int tam = vertices_ply.size();
-     num_verts=tam/3*nperfiles;
-     num_caras=18;
+     int n=tam/3;
 
-     /*
-     /  FALTA METER LOS PUNTOS TRAS APLICAR LA ENESIMA PARTE DEL GIRO SOBRE LOS VERTICES
-     /
-
-
-     for (int n=0;n<nperfiles;n++){
-       for (int i=0;i<30;i=i+3){
-         stlVertices[n*10+(i/3)]=Tupla3f(vertices_ply[i],
-         vertices_ply[i+1],vertices_ply[i]);
+     for (int j=0;j<nperfiles;j++){
+       for (int i=0;i<tam;i=i+3){
+         stlVertices.push_back(Tupla3f(vertices_ply[i]*cos(2*M_PI*j/nperfiles),
+         vertices_ply[i+1],vertices_ply[i]*sin(2*M_PI*j/nperfiles)));
        }
      }
+     stlVertices.push_back(Tupla3f(0,vertices_ply[1],0));//primer Y(mas alto)
+     stlVertices.push_back(Tupla3f(0,vertices_ply[tam-2],0)); //Ultimo Y(mas bajo)
 
-     for(int i=0;i<9;i++){
-       stlCaras[i]=Tupla3i(i,tam/3-1+i,i+1);
-       stlCaras[i+9]=Tupla3i(tam/3+i-1,tam/3+i,i+1);
+     stlCaras.push_back(Tupla3i(0,n*nperfiles,n*(nperfiles-1)));
+     for(int i=0;i<nperfiles-1;i++){
+      stlCaras.push_back(Tupla3i(i*n,n*nperfiles,(i+1)*n));
      }
-    // stlCaras[8]=Tupla3i(18,19,9);
+
+    for(int j=0;j<nperfiles-1;j++){
+      for(int i=0;i<n-1;i++){
+       stlCaras.push_back(Tupla3i(i+n*j,i+1+n*j,i+n*(j+1)));
+       stlCaras.push_back(Tupla3i(i+n*(j+1),i+1+n*(j+1),i+1+n*j));
+      }
+   }
+   for(int i=0;i<n-1;i++){
+    stlCaras.push_back(Tupla3i(i+n*(nperfiles-1),i+1+n*(nperfiles-1),i));
+    stlCaras.push_back(Tupla3i(i,i+1,i+1+n*(nperfiles-1)));
+  }
+
+  for (int i=0;i<nperfiles-1;i++){
+    stlCaras.push_back(Tupla3i(n-1+i*n,n*nperfiles+1,(n-1)+(i+1)*n));
+  }
+  stlCaras.push_back(Tupla3i(n-1+(nperfiles-1)*n,n*nperfiles+1,(n-1)));
+
 }
-*/

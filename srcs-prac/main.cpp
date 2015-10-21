@@ -276,6 +276,7 @@ void FGE_PulsarTeclaNormal( unsigned char tecla, int x_raton, int y_raton )
 
             case 2 :
                redibujar = P2_FGE_PulsarTeclaNormal( tecla ) ; // true si es necesario redibujar
+               break;
             // falta: case 3, etc....
 
             default :
@@ -396,7 +397,7 @@ void Inicializa_Vars( )
    camara_angulo_y = 0.0 ;
 
    // inicializar práctica actual y modo de visualización inicial
-   practica_actual = 1 ;
+   practica_actual = 2 ;
    modo_vis = 0 ;
 }
 
