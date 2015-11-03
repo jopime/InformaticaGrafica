@@ -10,7 +10,7 @@ if(argc!=9){
  cout<<"numero de argumentos incorrecto agrego ruta PLY"<<endl;
  miPLY= new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/plys/dragon.ply");
  miRevol= new MallaRevol("/Users/jopime/GitHub/InformaticaGrafica/plys/peon.ply",4);
- miBarrido=new MallaBarrido("/Users/jopime/GitHub/InformaticaGrafica/plys/peon.ply",2,2,2,13);
+ miBarrido=new MallaBarrido("/Users/jopime/GitHub/InformaticaGrafica/plys/revol.ply",2,2,2,13);
  miBarrido->presentacion();
 
 }

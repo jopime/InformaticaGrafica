@@ -16,10 +16,11 @@
    }
 
    for(int j=0;j<ntraslaciones;j++){
-     for(int i=0;i<n-1;i++){
+     for(int i=0;i<n-1;i++){ // cada iteracion une dos perfiles consecutivos
       stlCaras.push_back(Tupla3i(i+n*j,i+1+n*j,i+n*(j+1)));
       stlCaras.push_back(Tupla3i(i+n*(j+1),i+1+n*(j+1),i+1+n*j));
      }
+     //cierre del tubo creado
      stlCaras.push_back(Tupla3i(j*n+n-1,j*n,j*n+n));
      stlCaras.push_back(Tupla3i(j*n+n,n-1+n*(j+1),j*n+n-1));
   }

@@ -1,4 +1,14 @@
 #include "Cubo.hpp"
+/*
+//    e-------f
+//   /|      /|
+//  a------b| |
+//  | |     | |
+//  | |g----|-h
+//  |/      |/
+//  c-------d
+/
+*/
 Cubo::Cubo(){
   nombre_obj="Cubo";
 

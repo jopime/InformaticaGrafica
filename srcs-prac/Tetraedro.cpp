@@ -1,4 +1,13 @@
 #include "Tetraedro.hpp"
+/*
+//       c
+//      / \
+//     /   \
+//    /  d  \
+//   /   h   \
+//  g____|____a
+/
+*/
 Tetraedro::Tetraedro(){
   nombre_obj="Tetraedro";
 
