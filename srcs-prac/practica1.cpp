@@ -62,20 +62,8 @@ bool P1_FGE_PulsarTeclaNormal( unsigned char tecla )
    bool redisp=true;
    switch (toupper(tecla))
    {
-      case 'A':
-          objeto_activo=0;
-          break ;
-      case 'S':
-          objeto_activo=1;
-          break ;
-      case 'D':
-          objeto_activo=2;
-          break ;
-      case 'F':
-          objeto_activo=3;
-          break ;
-      case 'G':
-          objeto_activo=4;
+      case 'O':
+          objeto_activo=(objeto_activo+1)%5;
           break ;
       default:
          redisp = false ;

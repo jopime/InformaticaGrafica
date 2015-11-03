@@ -8,9 +8,9 @@ static MallaBarrido *miBarrido=NULL;
 void P2_Inicializar( int argc, char *argv[] ){
 if(argc!=9){
  cout<<"numero de argumentos incorrecto agrego ruta PLY"<<endl;
- miPLY= new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/plys/ant.ply");
+ miPLY= new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/plys/dragon.ply");
  miRevol= new MallaRevol("/Users/jopime/GitHub/InformaticaGrafica/plys/peon.ply",4);
- miBarrido=new MallaBarrido("/Users/jopime/GitHub/InformaticaGrafica/plys/cerrado.ply",-0.3,1,0.5,13);
+ miBarrido=new MallaBarrido("/Users/jopime/GitHub/InformaticaGrafica/plys/peon.ply",2,2,2,13);
  miBarrido->presentacion();
 
 }
@@ -26,14 +26,8 @@ bool P2_FGE_PulsarTeclaNormal( unsigned char tecla )
    bool redisp=true;
    switch (toupper(tecla))
    {
-      case 'Z':
-          objetito=0;
-          break ;
-      case 'X':
-          objetito=1;
-          break ;
-      case 'C':
-          objetito=2;
+      case 'O':
+          objetito=(objetito+1)%3;
           break ;
       default:
          redisp = false ;
