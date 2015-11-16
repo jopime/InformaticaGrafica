@@ -21,6 +21,8 @@
 // includes de archivos en el directorio de trabajo (de las prácticas)
 #include "practica1.hpp"
 #include "practica2.hpp"
+#include "practica3.hpp"
+
 
 // evita la necesidad de escribir std::
 using namespace std ;
@@ -182,7 +184,10 @@ void DibujarObjetos()
       case 2 :
           P2_DibujarObjetos(modo_vis); // definido en 'practica2.hpp'
         break;
-      // falta: case 3: ..... case 4: ..... case 5: .....
+      case 3 :
+          P3_DibujarObjetos(modo_vis); // definido en 'practica3.hpp'
+        break;
+      // falta:case 4: ..... case 5: .....
       //
 
       default :
@@ -258,7 +263,7 @@ void FGE_PulsarTeclaNormal( unsigned char tecla, int x_raton, int y_raton )
          modo_vis=(modo_vis+1)%4;
          break;
       case 'P':
-          practica_actual=(practica_actual%2)+1;
+          practica_actual=(practica_actual%3)+1;
           break;
       default:
          redibujar = false ;
@@ -391,7 +396,7 @@ void Inicializa_Vars( )
    camara_angulo_y = 0.0 ;
 
    // inicializar práctica actual y modo de visualización inicial
-   practica_actual = 2 ;
+   practica_actual = 3 ;
    modo_vis = 0 ;
 }
 
@@ -459,6 +464,8 @@ void Inicializar( int argc, char *argv[] )
    P1_Inicializar( argc, argv ) ;
    // inicializar práctica 2.
    P2_Inicializar( argc, argv ) ;
+   // inicializar práctica 3.
+   P3_Inicializar( argc, argv ) ;
 }
 
 // *********************************************************************
