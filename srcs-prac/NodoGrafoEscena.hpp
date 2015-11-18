@@ -10,6 +10,7 @@
     #include "Tetraedro.hpp"
     #include "Cilindro.hpp"
     #include "Cubo.hpp"
+    #include "MallaPly.hpp"
 
 
   class NodoGrafoEscena : public Objeto3D {
