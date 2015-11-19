@@ -6,8 +6,8 @@ MallaInd::MallaInd (){
 void MallaInd::visualizar (unsigned modo_vis){
   glEnableClientState( GL_VERTEX_ARRAY ); // habilitar array de vértices
   glVertexPointer( 3, GL_FLOAT, 0, &stlVertices[0]); // estable direccion y estructuras
-  glColor3f(0.2,0,0.4);    //Color amarillo claro
-  glPointSize(3);
+  //glColor3f(0.2,0,0.8);    //Color amarillo claro
+  glPointSize(2);
 
   switch (modo_vis) {
     case 0:

@@ -11,7 +11,6 @@ if(argc!=9){
  miPLY= new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/plys/cabezaBatman.ply");
  miRevol= new MallaRevol("/Users/jopime/GitHub/InformaticaGrafica/plys/peon.ply",4);
  miBarrido=new MallaBarrido("/Users/jopime/GitHub/InformaticaGrafica/plys/revol.ply",2,2,2,13);
- miBarrido->presentacion();
 
 }
 else{

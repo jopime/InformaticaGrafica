@@ -43,6 +43,7 @@
         };
       };
       std::vector<EntradaNGE> entradas ; // vector de entradas
+      int color;
     public:
                                                   // visualiza usando OpenGL
       virtual void visualizar( unsigned cv ) ;
@@ -52,7 +53,9 @@
       void agregar( EntradaNGE * entrada ){
           entradas.push_back(EntradaNGE(entrada));
       };       // Generica
-
+      void cambiarColor(int n){color=n;
+          cerr<<"color Cambiado a "<<color;
+      };
 };
 
 #endif

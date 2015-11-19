@@ -40,11 +40,6 @@ void P1_Inicializar( int argc, char *argv[] )
   mitetraedro=new Tetraedro();
   micilindro= new Cilindro(60);
   mitoro= new Toro();
-  //mitoro->presentacion();
-  //mitetraedro->presentacion();
-  //micono->presentacion();
-  //micilindro->presentacion();
-  //micubo->presentacion();
 }
 
 // ---------------------------------------------------------------------
