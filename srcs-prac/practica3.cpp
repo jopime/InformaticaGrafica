@@ -1,6 +1,8 @@
 #include "practica3.hpp"
 float grado = 0;
 float pos=0;
+float giroB=0;
+bool resta=false;
 static Ventana *miVentana=NULL;
 
 void P3_Inicializar( int argc, char *argv[] ){
@@ -17,13 +19,28 @@ void P3_Inicializar( int argc, char *argv[] ){
     bool redisp=true;
     switch (toupper(tecla))
     {
+       case 'L':
+        giroB=giroB+8;
+        miVentana->Lanzar(giroB);
+        break;
        case 'G':
-          grado=grado+10;
+          if (grado>40 || grado<-40)
+            resta=!resta;
+          if (resta)
+            grado=grado+10;
+          else
+            grado=grado-10;
            miVentana->Mov(grado);
            break ;
        case 'T':
+         if (grado>40 || grado<-40)
+           resta=!resta;
+         if (resta)
+           grado=grado+10;
+         else
+           grado=grado-10;
           pos=pos+0.1;
-           miVentana->Tras(pos);
+           miVentana->Tras(pos,grado);
            break ;
        default:
           redisp = false ;
