@@ -1,7 +1,7 @@
 #include "practica3.hpp"
 float grado = 0;
 float pos=0;
-float giroB=0;
+float giroB=1;
 bool resta=false;
 static Ventana *miVentana=NULL;
 
@@ -20,8 +20,9 @@ void P3_Inicializar( int argc, char *argv[] ){
     switch (toupper(tecla))
     {
        case 'L':
-        giroB=giroB+8;
         miVentana->Lanzar(giroB);
+        giroB=giroB+2;
+
         break;
        case 'G':
           if (grado>40 || grado<-40)

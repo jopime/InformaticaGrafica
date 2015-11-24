@@ -30,10 +30,12 @@
             objeto=pObjeto;
 
         } // (copia solo puntero)
+
         EntradaNGE( const Matriz4f & pMatriz ){
           tipoE=1;
           matriz=new Matriz4f(pMatriz);
-        }; // (crea copia) ￼ ￼ ￼ ￼ ￼
+        }; // (crea copia)
+        
         EntradaNGE( EntradaNGE * pEntrada){
           tipoE=pEntrada->tipoE;
           if (tipoE==1)

@@ -14,3 +14,6 @@ void BrazoIzquierdo::Girar(float k){
   *entradas[2].matriz= MAT_Rotacion(k,1,0,0);
     ((ManoIzquierda *)(entradas[0].objeto))->Girar(k);
 }
+void BrazoIzquierdo::Tirar(float k){
+    ((ManoIzquierda *)(entradas[0].objeto))->Tirar(k);
+}

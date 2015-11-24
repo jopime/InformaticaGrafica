@@ -5,7 +5,6 @@ Detalles::Detalles(){
   agregar(new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/plys/Logo.ply"));
   agregar(MAT_Rotacion(0,1,0,0));
   agregar(MAT_Traslacion(0,0,0));
-  agregar(new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/plys/Arma.ply"));
 }
 
 void Detalles::Girar(float k){

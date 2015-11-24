@@ -8,7 +8,6 @@
 #include "PiernaIzquierda.hpp"
 #include "Detalles.hpp"
 
-
 #include "NodoGrafoEscena.hpp"
 
 class Ventana : public NodoGrafoEscena {

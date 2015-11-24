@@ -7,6 +7,7 @@ class BrazoIzquierdo : public NodoGrafoEscena {
   public:
     BrazoIzquierdo();
     void Girar(float k);
+    void Tirar(float k);
   };
 
 #endif

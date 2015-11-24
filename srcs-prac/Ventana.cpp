@@ -25,10 +25,9 @@ void Ventana::Mov(float k){
 
 }
 void Ventana::Lanzar(float k){
-  ((Detalles *)(entradas[2].objeto))->Girar(k);
-
+  ((BrazoIzquierdo *)(entradas[4].objeto))->Tirar(k);
 }
 void Ventana::Tras(float k,float grado){
-  *entradas[0].matriz= MAT_Traslacion(0,0,k/2);
+  *entradas[0].matriz= MAT_Traslacion(0,0,k/8);
   Mov(grado);
 }
