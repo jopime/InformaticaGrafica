@@ -25,19 +25,4 @@ void Ventana::Girar(int k){
 }
 void Ventana::Agrandar(int k){
   *entradas[0].matriz= MAT_Escalado(1,k,k);
-  //((BrazoIzquierdo *)(entradas[4].objeto))->Agrandar(k);
 }
-
-/*
-void Ventana::Mov(float k){
-  ((Cabeza *)(entradas[3].objeto))->Girar(k);
-  ((BrazoIzquierdo *)(entradas[4].objeto))->Girar(k);
-  ((BrazoDerecho *)(entradas[5].objeto))->Girar(-k);
-  ((PiernaIzquierda *)(entradas[6].objeto))->Girar(-k);
-  ((PiernaDerecha *)(entradas[7].objeto))->Girar(k);
-
-}
-void Ventana::Lanzar(float k){
-  ((BrazoIzquierdo *)(entradas[4].objeto))->Tirar(k);
-}
-*/

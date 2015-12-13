@@ -16,7 +16,7 @@
 
 target_name	:= prac
 units_loc   := main practica1 Objeto3D MallaInd Cubo Cono Cilindro Tetraedro Toro\
- practica2 practica3 NodoGrafoEscena Ventana MallaPLY MallaRevol MallaBarrido Cabeza Cara\
+ practica2 practica3 NodoGrafoEscena Ventana MallaPLY MallaRevol MallaBarrido Cabeza\
   PiernaIzquierda PiernaDerecha BrazoIzquierdo BrazoDerecho manoDerecha manoIzquierda Detalles Mascara Arma
 ### nota: añadir a 'units_loc' los módulos practica2 practica3, etc.....
 

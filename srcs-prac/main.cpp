@@ -256,11 +256,11 @@ void FGE_PulsarTeclaNormal( unsigned char tecla, int x_raton, int y_raton )
    {
     	case 'A':
     		glutIdleFunc(idleCallBack);
-    		printf("Idle function ON\n");
+    		printf("Animation function ON\n");
     	break;
     	case 'S':
     		glutIdleFunc(NULL);
-    		printf("Idle function OFF\n");
+    		printf("Animation function OFF\n");
     	break;
       case 'Q' :
          exit( 0 );
