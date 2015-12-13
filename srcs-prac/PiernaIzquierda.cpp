@@ -8,5 +8,5 @@ PiernaIzquierda::PiernaIzquierda(){
 }
 
 void PiernaIzquierda::Girar(float k){
-  *entradas[1].matriz= MAT_Rotacion(-k,1,0,0);
+  *entradas[1].matriz= MAT_Rotacion(k,1,0,0);
 }

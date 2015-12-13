@@ -233,7 +233,14 @@ void FGE_CambioTamano( int nuevoAncho, int nuevoAlto )
    // forzar un nuevo evento de redibujado, para actualizar ventana
    glutPostRedisplay();
 }
-
+//======================================================
+// IDLE CALLBACK ROUTINE
+//======================================================
+void idleCallBack()
+{
+  P3_Animacion();
+	glutPostRedisplay();
+}
 // ---------------------------------------------------------------------
 // F.G. del evento de pulsación de la tecla normal
 //
@@ -247,6 +254,14 @@ void FGE_PulsarTeclaNormal( unsigned char tecla, int x_raton, int y_raton )
    bool redibujar = true ; // true si al acabar de procesar el evento resulta que es necesario redibujar
    switch (toupper(tecla))
    {
+    	case 'A':
+    		glutIdleFunc(idleCallBack);
+    		printf("Idle function ON\n");
+    	break;
+    	case 'S':
+    		glutIdleFunc(NULL);
+    		printf("Idle function OFF\n");
+    	break;
       case 'Q' :
          exit( 0 );
          break ;

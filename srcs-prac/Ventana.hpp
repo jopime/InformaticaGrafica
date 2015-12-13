@@ -13,9 +13,13 @@
 class Ventana : public NodoGrafoEscena {
   public:
     Ventana(int n);
+    void Desplazarse(float k);
+    void Girar(int k);
+    void Agrandar(int k);
+
+
     void Mov(float k);
     void Lanzar(float k);
-    void Tras(float k,float grado);
   };
 
 #endif

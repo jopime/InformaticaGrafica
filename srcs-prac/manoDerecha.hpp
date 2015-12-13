@@ -6,7 +6,6 @@
 class ManoDerecha : public NodoGrafoEscena {
   public:
     ManoDerecha();
-    void Girar(float k);
   };
 
 #endif

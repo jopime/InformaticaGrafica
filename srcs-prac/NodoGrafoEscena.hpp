@@ -35,7 +35,7 @@
           tipoE=1;
           matriz=new Matriz4f(pMatriz);
         }; // (crea copia)
-        
+
         EntradaNGE( EntradaNGE * pEntrada){
           tipoE=pEntrada->tipoE;
           if (tipoE==1)
@@ -56,7 +56,7 @@
           entradas.push_back(EntradaNGE(entrada));
       };       // Generica
       void cambiarColor(int n){color=n;
-          cerr<<"color Cambiado a "<<color;
+        //  cerr<<"color Cambiado a "<<color;
       };
 };
 

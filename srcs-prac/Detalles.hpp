@@ -6,7 +6,6 @@
 class Detalles : public NodoGrafoEscena {
   public:
     Detalles();
-    void Girar(float k);
   };
 
 #endif

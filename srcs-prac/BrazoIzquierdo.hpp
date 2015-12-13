@@ -8,6 +8,8 @@ class BrazoIzquierdo : public NodoGrafoEscena {
     BrazoIzquierdo();
     void Girar(float k);
     void Tirar(float k);
+    void Agrandar(int k);
+
   };
 
 #endif

@@ -14,3 +14,6 @@ void Arma::Girar(float k){
   *entradas[1].matriz= MAT_Escalado(1/k,1/k,1/k);
   *entradas[2].matriz= MAT_Rotacion(k,0,1,1);
 }
+void Arma::Agrandar(int k){
+  *entradas[1].matriz= MAT_Escalado(k,k,k);
+}

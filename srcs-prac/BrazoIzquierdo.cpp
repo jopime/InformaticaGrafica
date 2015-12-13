@@ -3,17 +3,19 @@
 
 BrazoIzquierdo::BrazoIzquierdo(){
   cambiarColor(1);
-  agregar (new ManoIzquierda());
   agregar (MAT_Traslacion(0,1.5,0));
   agregar (MAT_Rotacion(0,1,0,0));
-
   agregar(new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/plys/brazoIzquierdo.ply"));
+  agregar (new ManoIzquierda());
+
 }
 
 void BrazoIzquierdo::Girar(float k){
-  *entradas[2].matriz= MAT_Rotacion(k,1,0,0);
-    ((ManoIzquierda *)(entradas[0].objeto))->Girar(k);
+  *entradas[1].matriz= MAT_Rotacion(k,1,0,0);
 }
 void BrazoIzquierdo::Tirar(float k){
-    ((ManoIzquierda *)(entradas[0].objeto))->Tirar(k);
+    ((ManoIzquierda *)(entradas[3].objeto))->Tirar(k);
+}
+void BrazoIzquierdo::Agrandar(int k){
+    ((ManoIzquierda *)(entradas[3].objeto))->Agrandar(k);
 }

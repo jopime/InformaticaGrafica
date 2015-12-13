@@ -16,5 +16,6 @@ using namespace std;
 void P3_Inicializar( int argc, char *argv[] ) ;
 void P3_DibujarObjetos( unsigned modo ) ;
 bool P3_FGE_PulsarTeclaNormal(  unsigned char tecla ) ;
+void P3_Animacion();
 
 #endif

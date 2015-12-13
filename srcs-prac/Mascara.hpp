@@ -6,7 +6,6 @@
 class Mascara : public NodoGrafoEscena {
   public:
     Mascara();
-    void Girar(float k);
   };
 
 #endif
