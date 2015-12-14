@@ -18,6 +18,7 @@ else{
   miRevol=new MallaRevol(argv[2],atoi(argv[3]));
   miBarrido=new MallaBarrido(argv[4],atoi(argv[5]),atoi(argv[6]),atoi(argv[7]),atoi(argv[8]));
   }
+  miRevol->calcularNormales();
 }
 
 bool P2_FGE_PulsarTeclaNormal( unsigned char tecla )
