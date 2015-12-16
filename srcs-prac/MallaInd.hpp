@@ -12,19 +12,18 @@
    {
       // protected:
     public:
-            // declarar aquí tablas de vértices y caras
-            std::vector<Tupla3i> stlCaras;
-            std::vector<Tupla3f> stlVertices;
-            std::vector<Tupla3f> normalCaras;
-            std::vector<Tupla3f> normalVertices;
+      // declarar aquí tablas de vértices y caras
+      std::vector<Tupla3i> stlCaras;
+      std::vector<Tupla3f> stlVertices;
+      std::vector<Tupla3f> normalCaras;
+      std::vector<Tupla3f> normalVertices;
+      std::vector<Tupla2f> stlTextura;
 
-
-
-        // ....
+  // ....
   //     public:
-         MallaInd ();
-         virtual void visualizar( unsigned modo_vis ) ;
-         void presentacion();
-         void calcularNormales();
+   MallaInd ();
+   virtual void visualizar( unsigned modo_vis ) ;
+   void presentacion();
+   void calcularNormales();
    } ;
 #endif

@@ -27,6 +27,26 @@ void MallaInd::visualizar (unsigned modo_vis){
           glColor3f(0.7,0.7,0.7*(i%2));    //Color Negro/AMARILLO
           glDrawElements(GL_TRIANGLES,3,GL_UNSIGNED_INT,&stlCaras[i]);  //Visualiza primitivas
         }
+      case 4: //revisar
+        glShadeModel(GL_FLAT); //caras es como solido
+          glBegin(GL_TRIANGLES);
+              glColor3f(1.0f, 0.0f, 0.0f);  // activamos el color rojo
+              glVertex3f(-1.0f, 0.0f, 0.0f);
+              glColor3f(0.0f, 1.0f, 0.0f);  // activamos el color verde
+              glVertex3f(1.0f, 0.0f, 0.0f);
+              glColor3f(0.0f, 0.0f, 1.0f);  // activamos el color azul
+              glVertex3f(0.0f, 1.0f, 0.0f);
+          glEnd();
+      case 5: //revisar
+        glShadeModel(GL_SMOOTH); //vertices suave
+          glBegin(GL_TRIANGLES);
+                glColor3f(1.0f, 0.0f, 0.0f);  // activamos el color rojo
+                glVertex3f(-1.0f, 0.0f, 0.0f);
+                glColor3f(0.0f,1.0f, 0.0f);  // activamos el color verde
+                glVertex3f(1.0f,0.0f, 0.0f);
+                glColor3f(0.0f, 0.0f, 1.0f);  // activamos el color azul
+                glVertex3f(0.0f, 1.0f, 0.0f);
+          glEnd();
       break;
     default:
       cerr<<" opcion de visualizacion Incorrecta"<<endl;
@@ -72,9 +92,7 @@ void MallaInd::visualizar (unsigned modo_vis){
       normalVertices[stlCaras[i](2)]=normalVertices[stlCaras[i](2)]+normalCaras[stlCaras[i](2)];
     }
     for(int i=0;i<normalVertices.size();i++){
-      cerr<<"normalV "<<i<<": "<<normalVertices[i]<<endl;
       normalVertices[i]=normalVertices[i].normalized();
       cerr<<"normalV "<<i<<": "<<normalVertices[i]<<endl;
-
     }
   }
