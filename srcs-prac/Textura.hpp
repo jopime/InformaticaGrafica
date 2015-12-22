@@ -2,7 +2,10 @@
   #define TEXTURA_HPP
   #include <iostream>
   #include <string>
+  #include "aux.hpp"
   using namespace std ;
+//  #include "jpg_imagen.hpp"
+
 class Textura
 {
   public:
@@ -11,8 +14,8 @@ class Textura
    unsigned      mgct ;       // modo de gen. cc.tt. (0 = desactivado, 1 = objeto, 2 = camara)
    float         cs[4],ct[4]; // coeficientes para generación de coords. de textura
 
-   void activar(  );          // activa textura en el cauce fijo de OpenGL
-   Textura( const std::string & archivoJPG ) ; // crea un textura a partir de un archivo
-}
+   bool Activar();          // activa textura en el cauce fijo de OpenGL
+   Textura(string archivoJPG, unsigned modo_generacion_coordenadas_textura, float cs[4], float ct[4]) ; // crea un textura a partir de un archivo
+};
 
 #endif

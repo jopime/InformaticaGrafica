@@ -15,7 +15,7 @@ class Ventana : public NodoGrafoEscena {
     Ventana(int n);
     void Desplazarse(float k);
     void Girar(int k);
-    void Agrandar(int k);
+    void Agrandar(float k);
 
 
     void Mov(float k);

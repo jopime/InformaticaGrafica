@@ -1,16 +1,21 @@
 Compilado en Mac OSx 10.11
 
 Mediante las teclas :
-  0-> Cambio modo puntos
-  1-> Cambio modo Alambre
-  2-> Cambio modo Solido
-  3-> Cambio modo Ajedrez
+  P/p-> Cambio Practica
+  M/m-> Cambio modo Visualización
+  O/o-> Cambiar de objeto a visualizar  
 
-  a-> Cambio modo Cono
-  s-> Cambio modo Cilindro
-  d-> Cambio modo Cubo
-  f-> Cambio modo Tetraedro
+  G/g-> Cambio Grado de libertad
+  < -> Disminuye el valor del grado de libertad
+  > -> Aumenta el valor del grado de libertad
+
+  A/a-> Inicia Animacion
+  S/s-> Para Animacion
+  V-> Aumenta velocidad
+  v-> Disminuye velocidad
+  C/c-> Pone a cero la velocidad
 
 
-He implementado el cono y el cilindro, en los archivos cono.hpp cono.cpp y cilindro.hpp cilindro.cpp pudiendo variar el numero de caras , pasandole como parametro al constructor de dichos objetos
-el numero de caras laterales que llevaran, dicho paramentro lo podemos cambiar en la linea 38 y 39 de practica1.cpp
+
+
+He implementado la extension de la animación, haciendo que el muñeco “camine” al animar los grados de libertad de trasladar y de girar tanto piernas como brazos y cabeza, imponiéndole unos limites a los giros y haciendo que estos cambien de sentido al llegar a los limites, en la traslación igualmente al llegar al limite se traslada en la dirección opuesta

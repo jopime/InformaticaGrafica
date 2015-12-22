@@ -1,9 +1,9 @@
-#ifndef MATERIAL_HPP
-  #define MATERIAL_HPP
+#ifndef MATERIALESTANDAR_HPP
+  #define MATERIALESTANDAR_HPP
   #include <iostream>
   #include <string>
   using namespace std ;
-  
+
   class MaterialEstandar  : public Material
   {
     public:
@@ -15,3 +15,5 @@
                               //   si tiene textura: activa uso de la textura 'text'
                               //   si no tiene textura: desactiva uso de texturas
   } ;
+
+#endif

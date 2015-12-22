@@ -9,6 +9,5 @@
         // constructor
         // se debe especificar el nombre completo del archivo a leer
         //                      el número de copias del perfil
-        MallaRevol(const char * nombre_arch, unsigned nperfiles , bool textura=true) ;
-  } ;
+        MallaRevol(const char * nombre_arch, unsigned nperfiles , bool textura=true) ;  } ;
 #endif

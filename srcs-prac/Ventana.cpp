@@ -5,7 +5,7 @@ Ventana::Ventana(int n){
 
     agregar (MAT_Escalado(1,1,1));
     agregar (MAT_Traslacion(0,0,0));
-    agregar (new MallaPLY("/Users/jopime/GitHub/InformaticaGrafica/plys/cuerpo.ply"));
+    agregar (new MallaPLY("./cuerpo.ply"));
     agregar(new Detalles());
     agregar (new Cabeza());
     agregar (new BrazoIzquierdo());
@@ -23,6 +23,6 @@ void Ventana::Girar(int k){
   ((PiernaIzquierda *)(entradas[7].objeto))->Girar(-k);
   ((PiernaDerecha *)(entradas[8].objeto))->Girar(k);
 }
-void Ventana::Agrandar(int k){
+void Ventana::Agrandar(float k){
   *entradas[0].matriz= MAT_Escalado(1,k,k);
 }

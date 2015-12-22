@@ -4,6 +4,8 @@
   #include <string>
   #include <vector>
   #include "COLECCIONFL.hpp"
+  #include "FUENTEDIRECCIONAL.hpp"
+  #include "FUENTEPOSICIONAL.hpp"
 
   using namespace std ;
 
