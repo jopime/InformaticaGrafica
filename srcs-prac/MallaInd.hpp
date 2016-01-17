@@ -18,8 +18,7 @@
             std::vector<Tupla3f> normalCaras;
             std::vector<Tupla3f> normalVertices;
             std::vector<Tupla2f> stlTextura;
-            std::vector<Tupla3i> stlCaras;
-            std::vector<Tupla3f> stlVertices;
+
 
 
         // ....

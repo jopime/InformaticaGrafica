@@ -63,8 +63,36 @@
         }
         for (int j=0;j<n;j++){
           stlTextura.push_back(Tupla2f(s,(d[j]/d[n-1])));
-          cerr<<"ts "<<(i*n+j)<<stlTextura[i*n+j]<<endl;
+          cerr<<"Text "<<(i*n+j)<<stlTextura[i*n+j]<<endl;
         }
       }
     }
+    else{
+      stlTextura.push_back(Tupla2f(0,0));
+    }
+
 }
+void MallaRevol::Imprimir(){
+    cout <<"Soy "<<nombre()<<endl;
+    for(int i=0;i<stlVertices.size();i++){
+      cout<<" V["<<i<<"]:"<<stlVertices[i]<<" ";
+    }
+      cout<<endl;
+    for(int i=0;i<stlCaras.size();i++){
+      cout<<" A["<<i<<"]:"<<stlCaras[i]<<" ";
+    }
+    cout<<endl;
+
+    for(int i=0;i<normalCaras.size();i++){
+      cerr<<"normalC "<<i<<": "<<normalCaras[i]<<endl;
+    }
+      cout<<endl;
+    for(int i=0;i<normalVertices.size();i++){
+      cerr<<"normalV "<<i<<": "<<normalVertices[i]<<endl;
+    }
+    cout<<endl;
+
+    for (int i=0;i<stlTextura.size();i++){
+        cerr<<"Text "<<i<<" :"<<stlTextura[i]<<endl;
+      }
+  }

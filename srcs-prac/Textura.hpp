@@ -3,8 +3,10 @@
   #include <iostream>
   #include <string>
   #include "aux.hpp"
+
+  #include "jpg_imagen.hpp"
+
   using namespace std ;
-//  #include "jpg_imagen.hpp"
 
 class Textura
 {
