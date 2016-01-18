@@ -7,8 +7,6 @@
 
   using namespace std ;
 
-  using namespace std ;
-
 class FuentePosicional : public FuenteLuz
 {
   public:

@@ -28,6 +28,7 @@ void MallaInd::visualizar (unsigned modo_vis){
           glColor3f(0.7,0.7,0.7*(i%2));    //Color Negro/AMARILLO
           glDrawElements(GL_TRIANGLES,3,GL_UNSIGNED_INT,&stlCaras[i]);  //Visualiza primitivas
         }
+      break;
     case 4: //revisar
       glShadeModel(GL_FLAT); //caras es como solido
       glBegin(GL_TRIANGLES);
@@ -38,6 +39,7 @@ void MallaInd::visualizar (unsigned modo_vis){
           glColor3f(0.0f, 0.0f, 1.0f);  // activamos el color azul
           glVertex3f(0.0f, 1.0f, 0.0f);
       glEnd();
+        break;
       case 5: //revisar
         glShadeModel(GL_SMOOTH); //vertices suave
         glBegin(GL_TRIANGLES);

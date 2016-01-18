@@ -8,9 +8,9 @@
 #ifndef IG_PRACTICA4_HPP
 #define IG_PRACTICA4_HPP
 
-#include "MallaPLY.hpp"
-#include "MallaRevol.hpp"
-#include "MallaBarrido.hpp"
+#include "Ventana.hpp"
+
+
 #include <iostream>
 using namespace std;
 

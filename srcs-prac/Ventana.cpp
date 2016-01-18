@@ -13,6 +13,14 @@ Ventana::Ventana(int n){
     agregar (new PiernaIzquierda());
     agregar (new PiernaDerecha());
 }
+Ventana::Ventana(){
+
+agregar(new MaterialMadera());
+agregar (new MallaRevol("../plys/peon.ply",40));
+agregar (MAT_Traslacion(2,0,0));
+agregar(new MaterialBlanco());
+agregar (new MallaRevol("../plys/peon.ply",40));
+}
 void Ventana::Desplazarse(float k){
   *entradas[1].matriz= MAT_Traslacion(0,0,k/8);
 }

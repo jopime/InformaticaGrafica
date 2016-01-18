@@ -2,23 +2,18 @@
 
 FuenteDireccional::FuenteDireccional(float alpha_inicial, float beta_inicial){
   posvec=Tupla4f(alpha_inicial,beta_inicial,1,0); //luz direccional w=0 z=1  REVISAR;
-  longi=alpha_inicial;
-  lati=beta_inicial;
-
-
-const float ejeZ[4] = { 0.0, 0.0, 1.0, 0.0 } ;
-
-glMatrixMode( GL_MODELVIEW ) ;
-glPushMatrix() ;
-glLoadIdentity() ; // hacer M = Ide glMultMatrix( A ) ; / / A podría ser Ide,V o V N
-// (3) rotación α grados en torno a eje Y
-
-glRotatef( longi, 0.0, 1.0, 0.0 ) ; // (2) rotación β grados en torno al eje X-
-glRotatef( lati, -1.0, 0.0, 0.0 ) ; // (1) hacer li := (0, 0, 1) (paralela eje Z+)
-glLightfv( GL_LIGHT1, GL_POSITION, ejeZ );
-glPopMatrix();
+  colores[0]= Tupla4f(0.3,0.3,0.3,1.0);
+  colores[1]= Tupla4f(0.3,0.3,0.3,1.0);
+  colores[2]= Tupla4f(0.3,0.3,0.3,1.0);
+}
+void FuenteDireccional::variarAngulo( unsigned angulo, float incremento ){
+  if(angulo==0)
+    posvec=posvec+Tupla4f(incremento,0,0,0);
+  else
+    posvec=posvec-Tupla4f(incremento,0,0,0);
 }
 
+/*
 void FuenteDireccional::variarAngulo( unsigned angulo, float incremento ){
   const float ejeZ[4] = { 0.0, 0.0, 1.0, 0.0 } ;
 
@@ -56,3 +51,4 @@ void FuenteDireccional::variarAngulo( unsigned angulo, float incremento ){
       break;
   }
 }
+*/
