@@ -1,0 +1,17 @@
+Compilado en Mac OSx 10.11
+
+Mediante las teclas :
+  P/p-> Cambio Practica
+  M/m-> Cambio modo Visualización
+  O/o-> Cambiar de objeto a visualizar
+
+  G/g-> Alterna alfa y beta
+  < -> Disminuye el valor del alfa o beta seleccionado
+  > -> Disminuye el valor del alfa o beta seleccionado
+
+
+
+
+
+
+He implementado la extension dotando de texturas e iluminacion a la practica3, añadiendo la textura de madera al muñeco y textura negra a la cabeza, ademas de una luz posicional para iluminar la escena

@@ -8,9 +8,10 @@
 #include "PiernaIzquierda.hpp"
 #include "Detalles.hpp"
 #include "Matp4.hpp"
-#include "ColeccionFL.hpp"
-#include "FuenteDireccional.hpp"
-#include "FuentePosicional.hpp"
+#include "ColeccionFl.hpp"
+#include "Fuentes.hpp"
+#include "FuenteLuz.hpp"
+
 
 #include "NodoGrafoEscena.hpp"
 

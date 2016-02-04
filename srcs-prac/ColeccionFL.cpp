@@ -1,19 +1,16 @@
-#include "COLECCIONFL.hpp"
+#include "ColeccionFl.hpp"
 
-void ColeccionFL::activar(){
+// activa todas las fuentes de luz en el cauce fijo
+//   (antes de eso activa iluminación y la configura)
+void ColeccionFL::activar() {
 
-  for(int i=0;i<fuentes.size();i++){
-    glLightfv(GL_LIGHT0+i,GL_POSITION,fuentes[i]->posvec);
-    glLightfv(GL_LIGHT0+i,GL_AMBIENT,fuentes[i]->colores[0]);
-    glLightfv(GL_LIGHT0+i,GL_DIFFUSE,fuentes[i]->colores[1]);
-    glLightfv(GL_LIGHT0+i,GL_SPECULAR,fuentes[i]->colores[2]);
-
-
-  }
-
-  glEnable(GL_DEPTH_TEST);
-  glEnable(GL_LIGHTING);
-  for (int i=0;i<fuentes.size();i++){
-    fuentes[i]->activar(i);
+  glEnable( GL_LIGHTING );
+glEnable( GL_NORMALIZE );
+glDisable( GL_COLOR_MATERIAL );
+glLightModeli( GL_LIGHT_MODEL_TWO_SIDE, GL_FALSE );
+glLightModeli( GL_LIGHT_MODEL_COLOR_CONTROL, GL_SEPARATE_SPECULAR_COLOR ) ;
+glLightModeli( GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE );
+  for(int i=0; i<fuentes.size(); i++){
+      fuentes[i]->activar(i);
   }
 }

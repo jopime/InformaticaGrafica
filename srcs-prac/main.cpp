@@ -278,7 +278,7 @@ void FGE_PulsarTeclaNormal( unsigned char tecla, int x_raton, int y_raton )
          modo_vis=0;
          break;
      case 'M':
-         modo_vis=(modo_vis+1)%4;
+         modo_vis=(modo_vis+1)%6;
          break;
       case 'P':
           practica_actual=(practica_actual%4)+1;

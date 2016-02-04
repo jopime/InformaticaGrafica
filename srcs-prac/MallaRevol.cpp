@@ -46,53 +46,26 @@
     stlCaras.push_back(Tupla3i(n-1+i*n,n*nperfiles+1,(n-1)+(i+1)*n)); // base superior sin cerrar
   }
   stlCaras.push_back(Tupla3i(n-1+(nperfiles-1)*n,n*nperfiles+1,(n-1)));
-
+  calcularNormales();
   if(textura){ //no estan definidos los dos ultimos vertices centrados en el origen (el mas alto y el mas bajo)
       float s=0;
       float m=0;
       std::vector<float> d ;
       d.push_back(0);
       Tupla3f distancia;
+      for (int k = 1; k < n; k++) {
+        distancia=(stlVertices[k]-stlVertices[k-1]);
+        d.push_back(d[k-1]+sqrt(distancia.lengthSq()));
+      }
       for (int i=0;i<nperfiles;i++){
         s=(i/(nperfiles-1.0));
-        cerr<<"nperfil++ "<<i<<endl;
         //calculo dn
-        for (int k = 1; k < n; k++) {
-          distancia=(stlVertices[k]-stlVertices[k-1]); //revisar esto
-          d.push_back(d[k-1]+sqrt(distancia.lengthSq()));
-        }
         for (int j=0;j<n;j++){
           stlTextura.push_back(Tupla2f(s,(d[j]/d[n-1])));
           cerr<<"Text "<<(i*n+j)<<stlTextura[i*n+j]<<endl;
         }
       }
     }
-    else{
-      stlTextura.push_back(Tupla2f(0,0));
-    }
+
 
 }
-void MallaRevol::Imprimir(){
-    cout <<"Soy "<<nombre()<<endl;
-    for(int i=0;i<stlVertices.size();i++){
-      cout<<" V["<<i<<"]:"<<stlVertices[i]<<" ";
-    }
-      cout<<endl;
-    for(int i=0;i<stlCaras.size();i++){
-      cout<<" A["<<i<<"]:"<<stlCaras[i]<<" ";
-    }
-    cout<<endl;
-
-    for(int i=0;i<normalCaras.size();i++){
-      cerr<<"normalC "<<i<<": "<<normalCaras[i]<<endl;
-    }
-      cout<<endl;
-    for(int i=0;i<normalVertices.size();i++){
-      cerr<<"normalV "<<i<<": "<<normalVertices[i]<<endl;
-    }
-    cout<<endl;
-
-    for (int i=0;i<stlTextura.size();i++){
-        cerr<<"Text "<<i<<" :"<<stlTextura[i]<<endl;
-      }
-  }

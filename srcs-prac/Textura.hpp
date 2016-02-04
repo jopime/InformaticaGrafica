@@ -3,7 +3,7 @@
   #include <iostream>
   #include <string>
   #include "aux.hpp"
-
+  #include "tuplasg.hpp"
   #include "jpg_imagen.hpp"
 
   using namespace std ;
@@ -17,7 +17,7 @@ class Textura
    float         cs[4],ct[4]; // coeficientes para generación de coords. de textura
 
    void Activar();          // activa textura en el cauce fijo de OpenGL
-   Textura(string archivoJPG) ; // crea un textura a partir de un archivo
+   Textura(string archivoJPG,unsigned a) ; // crea un textura a partir de un archivo
 };
 
 #endif

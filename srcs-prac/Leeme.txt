@@ -3,19 +3,15 @@ Compilado en Mac OSx 10.11
 Mediante las teclas :
   P/p-> Cambio Practica
   M/m-> Cambio modo Visualización
-  O/o-> Cambiar de objeto a visualizar  
+  O/o-> Cambiar de objeto a visualizar
 
-  G/g-> Cambio Grado de libertad
-  < -> Disminuye el valor del grado de libertad
-  > -> Aumenta el valor del grado de libertad
-
-  A/a-> Inicia Animacion
-  S/s-> Para Animacion
-  V-> Aumenta velocidad
-  v-> Disminuye velocidad
-  C/c-> Pone a cero la velocidad
+  G/g-> Alterna alfa y beta
+  < -> Disminuye el valor del alfa o beta seleccionado
+  > -> Disminuye el valor del alfa o beta seleccionado
 
 
 
 
-He implementado la extension de la animación, haciendo que el muñeco “camine” al animar los grados de libertad de trasladar y de girar tanto piernas como brazos y cabeza, imponiéndole unos limites a los giros y haciendo que estos cambien de sentido al llegar a los limites, en la traslación igualmente al llegar al limite se traslada en la dirección opuesta
+
+
+He implementado la extension dotando de texturas e iluminacion a la practica3, añadiendo la textura de madera al muñeco y textura negra a la cabeza, ademas de una luz posicional para iluminar la escena

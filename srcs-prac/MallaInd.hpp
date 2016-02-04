@@ -19,13 +19,10 @@
             std::vector<Tupla3f> normalVertices;
             std::vector<Tupla2f> stlTextura;
 
-
-
         // ....
   //     public:
          MallaInd ();
          virtual void visualizar( unsigned modo_vis ) ;
-         void presentacion();
          void calcularNormales();
 
    } ;

@@ -9,10 +9,17 @@ static float velocidadG0=0.1; //cantidad de velocidad para traslaciones en anima
 static int velocidadG1=1;   //cantidad para velocidad giros en animacion
 static int nG=3;
 static bool restaAngulo=false,restaDistancia=false;
+ColeccionFL * fuentesBatman=NULL;
+
 
 void P3_Inicializar( int argc, char *argv[] )
 {
   miVentana= new Ventana(3);
+  fuentesBatman=new ColeccionFL;
+  glEnable(GL_RESCALE_NORMAL);
+  FuentePosicional* fuenteunica=new FuentePosicional(Tupla3f(10.0,0.0,0.0));
+  fuentesBatman->fuentes.push_back(fuenteunica);
+  fuentesBatman->activar();
 }
  void P3_DibujarObjetos( unsigned modo )
  {

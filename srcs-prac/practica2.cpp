@@ -8,10 +8,9 @@ static MallaBarrido *miBarrido=NULL;
 void P2_Inicializar( int argc, char *argv[] ){
 if(argc!=9){
  cout<<"numero de argumentos incorrecto agrego ruta PLY"<<endl;
- miPLY= new MallaPLY("../plys/big_dodge.ply");
- miRevol= new MallaRevol("../plys/peon.ply",4);
- miBarrido=new MallaBarrido("../plys/revol.ply",2,2,2,13);
-miPLY->calcularNormales();
+ miPLY= new MallaPLY("./big_dodge.ply");
+ miRevol= new MallaRevol("./peon.ply",4);
+ miBarrido=new MallaBarrido("./revol.ply",2,2,2,13);
 }
 else{
   miPLY= new MallaPLY(argv[1]);
